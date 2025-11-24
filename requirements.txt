@@ -1,0 +1,25 @@
+# Project Requirements for Arabic NER and POS Tagging
+# To install all dependencies, run: pip install -r requirements.txt
+
+# Data Handling and General Utilities
+pandas
+numpy
+scikit-learn
+datasets # For easy data loading in Colab/VS Code
+
+# NER Models
+# HMM: Uses standard Python libraries (collections, math)
+sklearn-crfsuite # For CRF model
+seqeval # For standard NER evaluation metrics
+
+# POS Models
+# Rule-based: Uses standard Python libraries (re, collections)
+# MaxEnt: Uses scikit-learn (LogisticRegression, DictVectorizer)
+tensorflow # For BiLSTM model
+keras # Included with tensorflow
+
+# Transformers (for BERT model)
+transformers
+sentencepiece # Dependency for some tokenizers
+accelerate # For faster training
+torch # PyTorch is a dependency for transformers, though we use TensorFlow for BiLSTM
